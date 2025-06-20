@@ -29,6 +29,19 @@ const typeItSequence = (instance) => {
 };
 
 const Hero = () => {
+  const handleContactClick = () => {
+    const contactSection = document.getElementById("contact");
+    contactSection?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
+
+  const handleGithubClick = () => {
+    const githubURL = "https://github.com/sangyeop0529";
+    window.open(githubURL, "_blank", "noopener,noreferrer");
+  };
+
   return (
     <section className={style.section}>
       <div className={style.container}>
@@ -37,8 +50,10 @@ const Hero = () => {
         </h2>
 
         <div className={style.btnGroup}>
-          <button className={style.primaryBtn}>Contact Me</button>
-          <button className={style.secondaryBtn}>
+          <button className={style.primaryBtn} onClick={handleContactClick}>
+            Contact Me
+          </button>
+          <button className={style.secondaryBtn} onClick={handleGithubClick}>
             <FaGithub /> GitHub
           </button>
         </div>
