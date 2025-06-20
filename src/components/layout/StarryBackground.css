@@ -27,31 +27,61 @@ body {
 
 .shooting-star {
   position: absolute;
-  width: 3px;
-  height: 3px;
-  background-color: #fff;
+  width: 4px; /* 3px → 4px 크기 증가 */
+  height: 4px;
+  background: linear-gradient(45deg, #fff, #ffd700); /* 그라데이션 추가 */
   border-radius: 50%;
-  animation: shoot 0.8s linear forwards;
+  box-shadow: 0 0 10px #fff, 0 0 20px #ffd700; /* 글로우 효과 */
+  animation: shoot 1.2s linear forwards; /* 지속 시간 증가 */
 }
 
-@keyframes twinkle {
-  0% {
-    opacity: 0.2;
-    transform: scale(1);
-  }
-  100% {
-    opacity: 0.8;
-    transform: scale(1.2);
-  }
+/* 별똥별 꼬리 효과 */
+.shooting-star {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #fff; /* 흰색으로 변경 */
+  border-radius: 50%;
+  box-shadow: 0 0 10px #fff, 0 0 20px rgba(255, 255, 255, 0.8); /* 흰색 글로우 */
+  animation: shoot 1.2s linear forwards;
+}
+
+/* 별똥별 꼬리 효과도 흰색으로 */
+.shooting-star {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 10px #fff, 0 0 20px rgba(255, 255, 255, 0.8);
+  animation: shoot 1.8s linear forwards; /* 1.2s → 1.8s (2배 느리게) */
+}
+
+.shooting-star::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60px;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.8), transparent);
+  transform: translate(-50%, -50%) rotate(45deg);
+  border-radius: 2px;
 }
 
 @keyframes shoot {
   0% {
     transform: translateX(0) translateY(0);
     opacity: 1;
+    box-shadow: 0 0 10px #fff, 0 0 20px rgba(255, 255, 255, 0.8);
+  }
+  50% {
+    opacity: 1;
+    box-shadow: 0 0 15px #fff, 0 0 30px rgba(255, 255, 255, 0.9);
   }
   100% {
-    transform: translateX(500px) translateY(500px);
+    transform: translateX(600px) translateY(600px);
     opacity: 0;
+    box-shadow: 0 0 5px #fff, 0 0 10px rgba(255, 255, 255, 0.5);
   }
 }

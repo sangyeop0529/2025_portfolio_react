@@ -5,8 +5,8 @@ import { FaGithub } from "react-icons/fa";
 
 // TypeIt
 const typeItOptions = {
-  speed: 50,
-  deleteSpeed: 50,
+  speed: 80,
+  deleteSpeed: 80,
   waitUntilVisible: true,
   loop: true,
   html: true,
@@ -14,7 +14,7 @@ const typeItOptions = {
 
 const typeItSequence = (instance) => {
   return instance
-    .type("<span class='en'>Clean Code,</span>")
+    .type("<span class='en'>Clean <b class='point-color'>Code</b>,</span>")
     .break()
     .type("<span class='en'>Great Results</span>")
     .pause(2000)

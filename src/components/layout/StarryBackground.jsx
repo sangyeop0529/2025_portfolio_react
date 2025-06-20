@@ -3,28 +3,36 @@ import "./StarryBackground.css";
 
 const StarryBackground = () => {
   useEffect(() => {
-    const createShootingStar = () => {
-      const star = document.createElement("div");
-      star.className = "shooting-star";
+    const createShootingStarGroup = () => {
+      const count = Math.floor(Math.random() * 2) + 2; // 2~3개 랜덤
 
-      const startX = Math.random() * window.innerWidth;
-      const startY = Math.random() * (window.innerHeight / 2);
+      for (let i = 0; i < count; i++) {
+        setTimeout(() => {
+          // 각각 다른 시간에 생성
+          const star = document.createElement("div");
+          star.className = "shooting-star";
 
-      star.style.left = `${startX}px`;
-      star.style.top = `${startY}px`;
+          // 완전히 다른 위치에서 시작
+          const startX = Math.random() * window.innerWidth;
+          const startY = Math.random() * (window.innerHeight / 2);
 
-      document.getElementById("starry-background").appendChild(star);
+          star.style.left = `${startX}px`;
+          star.style.top = `${startY}px`;
 
-      setTimeout(() => {
-        star.remove();
-      }, 800);
+          document.getElementById("starry-background").appendChild(star);
+
+          setTimeout(() => {
+            star.remove();
+          }, 2400);
+        }, i * 600); // 0.3초씩 간격을 두고 생성
+      }
     };
 
     const interval = setInterval(() => {
-      if (Math.random() < 0.2) {
-        createShootingStar();
+      if (Math.random() < 0.7) {
+        createShootingStarGroup();
       }
-    }, 3000);
+    }, 2000); // 간격도 조금 늘림
 
     return () => clearInterval(interval);
   }, []);
