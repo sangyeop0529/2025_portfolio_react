@@ -1,0 +1,71 @@
+.section {
+  height: 100vh;
+  text-align: center;
+}
+
+.container {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.title {
+  min-height: 300px; /* TypeIt 컨테이너 최소 높이 고정 */
+  font-size: 100px;
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 80px;
+  line-height: 1.4;
+}
+
+.subTitle {
+  font-size: 24px;
+  line-height: 1.2;
+  font-weight: 300;
+}
+
+.btnGroup {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+.btnGroup button {
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  cursor: pointer;
+  font-weight: 600;
+  outline: none;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  border-radius: 5px;
+}
+
+.primaryBtn {
+  background: #ffc107;
+  color: #0d1117;
+}
+
+.primaryBtn:hover {
+  background: #ffd54f;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(255, 193, 7, 0.4);
+}
+
+.secondaryBtn {
+  background: transparent;
+  color: #fff;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.secondaryBtn:hover {
+  background: #fff;
+  color: #0d1117;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.3);
+}
