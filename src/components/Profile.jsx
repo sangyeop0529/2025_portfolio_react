@@ -17,7 +17,7 @@ const Experience = () => {
           start: "top bottom",
           end: "bottom bottom",
           scrub: 1,
-          markers: true,
+          // markers: true,
         },
       })
       .to(
@@ -39,8 +39,7 @@ const Experience = () => {
         </p>
 
         <figure className={style.profile}>
-          <img src="https://placehold.co/400x400" />
-          {/* <img src={profileImage} alt="profile" /> */}
+          <img src={profileImage} alt="profile" />
         </figure>
 
         <div className={style.flexBox}>

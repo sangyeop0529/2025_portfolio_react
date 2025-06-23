@@ -9,8 +9,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
-  margin-bottom: 80px;
+  margin: 80px auto;
 }
 .profile img {
   display: block;

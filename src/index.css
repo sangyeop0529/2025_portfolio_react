@@ -41,3 +41,7 @@ section {
   line-height: 1.2;
   font-weight: 400;
 }
+
+.reverse {
+  flex-direction: row-reverse;
+}
