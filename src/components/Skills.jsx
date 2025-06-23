@@ -64,8 +64,8 @@ const Skills = () => {
       <div className={`${style.container} container`}>
         <h2 className={`${style.mainTitle} main-title`}>My Skills</h2>
         <p className={`${style.subTitle} sub-title`}>
-          UX/UI, 웹퍼블리셔의 경험과
-          <br /> 프론트엔드 기술의 콜라보
+          웹 개발의 기초부터 최신 기술까지 <br />
+          실무에 바로 적용 가능한 나의 핵심 역량들입니다.
         </p>
 
         <div className={style.listWrap}>

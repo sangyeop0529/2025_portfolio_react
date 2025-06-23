@@ -34,8 +34,8 @@ const Experience = () => {
       <div className={`${style.container} container`}>
         <h2 className={`${style.mainTitle} main-title`}>WHO AM I</h2>
         <p className={`${style.subTitle} sub-title`}>
-          안녕하세요!
-          <br /> 기본에 충실한 프론트엔드 이상엽입니다.
+          기본에 충실하면서도 새로운 기술에 도전하는 <br />
+          성장하는 프론트엔드 개발자입니다.
         </p>
 
         <figure className={style.profile}>
