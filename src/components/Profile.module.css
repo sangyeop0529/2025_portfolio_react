@@ -1,0 +1,57 @@
+.section {
+  color: #0d1117;
+}
+.profile {
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-bottom: 80px;
+}
+.profile img {
+  display: block;
+  width: 100%;
+}
+
+.flexBox {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+}
+
+.category {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.list li {
+  width: 80%;
+}
+
+.title {
+  font-size: 20px;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.desc {
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.date {
+  display: block;
+  margin-top: 8px;
+  color: #888;
+}

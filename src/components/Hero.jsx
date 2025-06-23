@@ -43,7 +43,7 @@ const Hero = () => {
   };
 
   return (
-    <section className={style.section}>
+    <section id="hero" className={style.section}>
       <div className={style.container}>
         <h2 className={style.title}>
           <TypeIt options={typeItOptions} getAfterInit={typeItSequence} />
