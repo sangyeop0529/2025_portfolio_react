@@ -11,7 +11,7 @@ const SkillCard = ({ number, name, level, desc }) => {
       <div className={`${style.card} ${isFlipped ? style.flipped : ""}`}>
         <div className={style.front}>
           <div className={style.cardImg}>
-            <img src={`/public/images/card-icon0${number}.png`} alt="HTML" />
+            <img src={`/images/card-icon0${number}.png`} alt={name} />
           </div>
           <span className={style.title}>{name}</span>
           <p className={style.btn}>클릭하여 자세히 보기</p>
