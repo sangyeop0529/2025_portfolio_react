@@ -1,8 +1,8 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import style from "./Profile.module.css";
 import profileImage from "../assets/images/profile.jpg";
+import style from "./Profile.module.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -39,7 +39,8 @@ const Experience = () => {
         </p>
 
         <figure className={style.profile}>
-          <img src={profileImage} alt="profile" />
+          {/* <img src={profileImage} alt="profile" /> */}
+          <img src="https://placehold.co/380x380" />
         </figure>
 
         <div className={style.flexBox}>

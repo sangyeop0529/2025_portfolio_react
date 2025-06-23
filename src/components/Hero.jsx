@@ -1,7 +1,7 @@
 import React from "react";
-import style from "./Hero.module.css";
 import TypeIt from "typeit-react";
 import { FaGithub } from "react-icons/fa";
+import style from "./Hero.module.css";
 
 // TypeIt
 const typeItOptions = {
