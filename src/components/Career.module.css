@@ -1,3 +1,9 @@
 .section {
-  height: 50vh;
+  padding-bottom: 280px;
+}
+.list {
+  margin-top: 120px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 120px 80px;
 }

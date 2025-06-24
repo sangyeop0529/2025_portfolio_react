@@ -1,0 +1,60 @@
+.section {
+  position: relative;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    rgba(26, 32, 44, 0.2) 25%,
+    rgba(26, 32, 44, 0.5) 40%,
+    rgba(26, 32, 44, 0.8) 55%,
+    #1a202c 65%,
+    rgba(16, 18, 24, 1) 80%,
+    #0a0a0a 100%
+  );
+  color: #ffffff;
+  min-height: 50vh;
+  padding: 0;
+  text-align: center;
+}
+
+.content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.titleBox {
+  margin-bottom: 40px;
+}
+
+.title {
+  font-size: 120px;
+  font-weight: 600;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.8),
+    0 0 20px rgba(255, 255, 255, 0.6), 0 0 30px rgba(255, 255, 255, 0.4);
+}
+
+.thankyou {
+  position: relative;
+  font-size: 64px;
+  font-weight: 700;
+  top: -40px;
+  z-index: 3;
+}
+
+.info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 40px;
+}
+
+.info > div {
+  font-size: 50px;
+}
+
+.copyLight {
+  color: #888;
+  line-height: 1.2;
+}

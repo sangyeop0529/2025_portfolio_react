@@ -1,0 +1,14 @@
+.center {
+  text-align: center;
+}
+.mainTitle {
+  font-size: 80px;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.subTitle {
+  font-size: 20px;
+  line-height: 1.2;
+  font-weight: 400;
+}

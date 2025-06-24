@@ -3,6 +3,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import profileImage from "../assets/images/profile.jpg";
 import style from "./Profile.module.css";
+import SectionTitle from "./sectionTitle";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -32,11 +33,11 @@ const Experience = () => {
   return (
     <section id="profile" className={style.section} ref={profileRef}>
       <div className={`${style.container} container`}>
-        <h2 className={`${style.mainTitle} main-title`}>WHO AM I</h2>
-        <p className={`${style.subTitle} sub-title`}>
-          기본에 충실하면서도 새로운 기술에 도전하는 <br />
-          성장하는 프론트엔드 개발자입니다.
-        </p>
+        <SectionTitle
+          title="WHO AM I"
+          subTitle="기본에 충실하면서도 새로운 기술에 도전하는 <br />
+        성장하는 프론트엔드 개발자입니다."
+        />
 
         <figure className={style.profile}>
           {/* <img src={profileImage} alt="profile" /> */}

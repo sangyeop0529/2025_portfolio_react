@@ -1,0 +1,59 @@
+.card {
+  width: calc((100% - 80px * 1) / 2);
+  border-radius: 25px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid #fff;
+  backdrop-filter: blur(10px);
+}
+
+.card:nth-child(2n + 1) {
+  position: relative;
+  top: 120px;
+}
+
+.thumbnail {
+  width: 100%;
+  background-color: red;
+}
+
+.thumbnail img {
+  display: block;
+  width: 100%;
+}
+
+.info {
+  padding: 20px;
+}
+
+.projectTop {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.date {
+  color: #888;
+  font-size: 14px;
+}
+
+.projectBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+  font-weight: 400;
+}

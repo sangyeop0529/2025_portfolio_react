@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import style from "./SkillCard.module.css";
 
-const SkillCard = ({ number, name, level, desc }) => {
-  const [isFlipped, setIsFlipped] = useState(false);
-
-  const handleClick = () => setIsFlipped(!isFlipped);
+const SkillCard = ({ number, name, level, desc, isFlipped, onFlip }) => {
+  const handleClick = () => {
+    onFlip();
+  };
 
   return (
     <li className={style.container} onClick={handleClick}>

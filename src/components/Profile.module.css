@@ -2,14 +2,14 @@
   color: #0d1117;
 }
 .profile {
-  width: 380px;
-  height: 380px;
+  width: 460px;
+  height: 460px;
   border-radius: 50%;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 80px auto;
+  margin: 120px auto 80px;
 }
 .profile img {
   display: block;

@@ -3,6 +3,8 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import style from "./Projects.module.css";
 import ProjectItem from "./ProjectItem";
+import SectionTitle from "./sectionTitle";
+import { projectsData } from "../data/projectsData";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -55,17 +57,23 @@ const Projects = () => {
   return (
     <section id="projects" className={style.section} ref={projectsRef}>
       <div className={`${style.container} container`} ref={containerRef}>
-        <h2 className={`${style.mainTitle} main-title`}>Projects</h2>
-        <p className={`${style.subTitle} sub-title`}>
-          체계적인 학습을 통해 쌓아온 React 개발 경험과 <br />그 과정에서 완성한
-          프로젝트들입니다.
-        </p>
+        <SectionTitle
+          title="Projects"
+          subTitle="체계적인 학습을 통해 쌓아온 React 개발 경험과 <br />그 과정에서 완성한
+          프로젝트들입니다."
+        />
 
         <ul className={style.list} ref={listRef}>
-          <ProjectItem number="1" />
-          <ProjectItem number="2" />
-          <ProjectItem number="3" />
-          <ProjectItem number="4" />
+          {projectsData.map((project) => (
+            <ProjectItem
+              key={project.number}
+              number={project.number}
+              title={project.title}
+              desc={project.desc}
+              date={project.date}
+              tech={project.tech}
+            />
+          ))}
         </ul>
       </div>
     </section>
