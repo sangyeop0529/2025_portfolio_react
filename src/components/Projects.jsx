@@ -3,7 +3,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import style from "./Projects.module.css";
 import ProjectItem from "./ProjectItem";
-import SectionTitle from "./sectionTitle";
+import SectionTitle from "./SectionTitle";
 import { projectsData } from "../data/projectsData";
 
 gsap.registerPlugin(ScrollTrigger);

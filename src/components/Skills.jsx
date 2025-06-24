@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import style from "./Skills.module.css";
 import SkillCard from "./SkillCard";
-import SectionTitle from "./sectionTitle";
+import SectionTitle from "./SectionTitle";
 import { skillsData } from "../data/skillsData";
 
 const Skills = () => {
