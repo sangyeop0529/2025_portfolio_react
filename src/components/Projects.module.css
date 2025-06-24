@@ -1,3 +1,4 @@
-.section {
-  height: 80vh;
+.list {
+  display: flex;
+  gap: 10%;
 }
