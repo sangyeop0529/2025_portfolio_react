@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./Career.module.css";
-import SectionTitle from "./sectionTitle";
+import SectionTitle from "./SectionTitle";
 import { CareersData } from "../data/CareersData";
 import CareerItem from "./CareerItem";
 
