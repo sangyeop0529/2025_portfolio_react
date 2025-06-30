@@ -7,6 +7,8 @@ export const projectsData = [
     date: "2025.06.18 ~ 2025.06.30",
     tech: ["React", "GSAP", "CSS Modules", "JavaScript"],
     imgName: "portfolio.png",
+    git: "https://github.com/sangyeop0529/2025_portfolio_react",
+    URL: "https://2025-portfolio-react.vercel.app/",
   },
   {
     number: 2,
@@ -16,6 +18,8 @@ export const projectsData = [
     date: "2025.06.05 ~ 2025.05.17",
     tech: ["React", "TypeScript", "firebase"],
     imgName: "blogApp.png",
+    git: "https://github.com/sangyeop0529/2025_blog_app_react",
+    URL: "https://blog-app-2e663.web.app/",
   },
   {
     number: 3,
@@ -25,6 +29,8 @@ export const projectsData = [
     date: "2025.05.26 ~ 2025.06.4",
     tech: ["React", "API", "CSS Modules"],
     imgName: "youtube.png",
+    git: "https://github.com/sangyeop0529/2025-clone-yotube-coding-react",
+    URL: "https://youtubeclonecoing.netlify.app/",
   },
   {
     number: 4,
@@ -34,5 +40,7 @@ export const projectsData = [
     date: "2025.05.16 ~ 2025.05.23",
     tech: ["React", "JavaScript", "CSS"],
     imgName: "emotionDairy.png",
+    git: "https://github.com/sangyeop0529/2025_05_emotion_diary",
+    URL: "https://2025-05-emotion-diary.vercel.app/",
   },
 ];

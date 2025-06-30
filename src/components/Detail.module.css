@@ -1,0 +1,73 @@
+.section {
+  color: #0d1117;
+}
+.title {
+  font-size: 48px;
+  font-weight: bold;
+}
+
+.imgBox {
+  margin-bottom: 40px;
+}
+
+.imgBox img {
+  display: block;
+  width: 100%;
+}
+
+.bottom {
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.overview {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px;
+}
+
+.overviewTitle {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.overviewDesc {
+  font-size: 18px;
+}
+
+.overviewInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.overviewTech {
+  display: inline-flex;
+  gap: 8px;
+}
+
+.btnGroup {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 12px;
+}
+
+.btn {
+  font-size: 20px;
+  cursor: pointer;
+  font-weight: 700;
+  outline: none;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+  border-radius: 5px;
+  background: #ffc107;
+  color: #0d1117;
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+}
