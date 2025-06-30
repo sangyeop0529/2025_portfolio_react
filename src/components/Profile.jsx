@@ -40,8 +40,8 @@ const Experience = () => {
         />
 
         <figure className={style.profile}>
-          {/* <img src={profileImage} alt="profile" /> */}
-          <img src="https://placehold.co/380x380" />
+          <img src={profileImage} alt="profile" />
+          {/* <img src="https://placehold.co/380x380" /> */}
         </figure>
 
         <div className={style.flexBox}>

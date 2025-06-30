@@ -1,9 +1,10 @@
-.section {
-  padding-bottom: 280px;
-}
 .list {
-  margin-top: 120px;
+  margin-top: 240px;
   display: flex;
   flex-wrap: wrap;
   gap: 120px 80px;
+}
+
+.moreBtn {
+  margin: 80px auto 0;
 }

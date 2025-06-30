@@ -1,12 +1,23 @@
-import React from "react";
+import React, { useState } from "react";
 import style from "./Career.module.css";
 import SectionTitle from "./SectionTitle";
 import { CareersData } from "../data/CareersData";
 import CareerItem from "./CareerItem";
 
 const Career = () => {
+  const [visibleCount, setVisibleCount] = useState(4);
+  const itemPerPage = 2;
+
+  const visibleCareers = CareersData.slice(0, visibleCount);
+
+  const handleShowMore = () => {
+    setVisibleCount((prev) => prev + itemPerPage);
+  };
+
+  const hasMoreItem = visibleCount < CareersData.length;
+
   return (
-    <section className={style.section} id="Career">
+    <section className={style.section} id="career">
       <div className={`${style.container} container`}>
         <SectionTitle
           center
@@ -15,10 +26,16 @@ const Career = () => {
         />
 
         <ul className={style.list}>
-          {CareersData.map((career) => (
+          {visibleCareers.map((career) => (
             <CareerItem key={career.number} {...career} />
           ))}
         </ul>
+
+        {hasMoreItem && (
+          <button className={style.moreBtn} onClick={handleShowMore}>
+            프로젝트 더 보기
+          </button>
+        )}
       </div>
     </section>
   );

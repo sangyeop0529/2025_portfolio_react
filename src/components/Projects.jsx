@@ -14,43 +14,67 @@ const Projects = () => {
   const listRef = useRef();
 
   useEffect(() => {
-    const project = gsap.utils.toArray(".project-item");
+    // GSAP Context 생성 - 이 컴포넌트의 애니메이션만 관리
+    const ctx = gsap.context(() => {
+      const project = gsap.utils.toArray(".project-item");
 
-    // 배경
-    gsap
-      .timeline({
+      // 배경 애니메이션
+      gsap
+        .timeline({
+          scrollTrigger: {
+            trigger: projectsRef.current,
+            start: "top 100%",
+            end: "bottom bottom",
+            scrub: 1,
+            refreshPriority: -1,
+          },
+        })
+        .to(
+          projectsRef.current,
+          {
+            backgroundColor: "#1a1a1a",
+          },
+          0
+        );
+
+      // 가로 스크롤 효과
+      gsap.to(project, {
+        xPercent: -100 * (project.length - 1),
+        ease: "none",
         scrollTrigger: {
-          trigger: projectsRef.current,
-          start: "top 100%",
-          end: "bottom bottom",
-          scrub: 1,
+          trigger: containerRef.current,
+          pin: true,
+          scrub: 0.5,
+          start: "top top",
+          end: () => "+=" + (listRef.current?.scrollWidth - window.innerWidth),
+          invalidateOnRefresh: true,
+          refreshPriority: 1,
         },
-      })
-      .to(
-        "#projects",
-        {
-          backgroundColor: "#1a1a1a",
-        },
-        0
-      );
+      });
+    }, projectsRef); // 컨텍스트 스코프를 projectsRef로 제한
 
-    // 가로 스크롤 효과
-    let scrollTween = gsap.to(project, {
-      xPercent: -100 * (project.length - 1),
-      ease: "none",
-      scrollTrigger: {
-        trigger: containerRef.current,
-        pin: true,
-        scrub: 0.5,
-        // snap: 1 / (project.length - 1),
-        start: "top top",
-        end: () => "+=" + (listRef.current.scrollWidth - window.innerWidth),
-      },
-    });
+    // 컴포넌트 언마운트 시 이 컨텍스트의 애니메이션만 정리
+    return () => ctx.revert();
+  }, []);
+
+  // 리사이즈 및 페이지 로드 처리
+  useEffect(() => {
+    const handleResize = () => {
+      ScrollTrigger.refresh();
+    };
+
+    const handleLoad = () => {
+      setTimeout(() => {
+        ScrollTrigger.refresh();
+      }, 100);
+    };
+
+    window.addEventListener("resize", handleResize);
+    window.addEventListener("load", handleLoad);
 
     return () => {
-      scrollTween.kill();
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+      window.removeEventListener("resize", handleResize);
+      window.removeEventListener("load", handleLoad);
     };
   }, []);
 
@@ -65,14 +89,7 @@ const Projects = () => {
 
         <ul className={style.list} ref={listRef}>
           {projectsData.map((project) => (
-            <ProjectItem
-              key={project.number}
-              number={project.number}
-              title={project.title}
-              desc={project.desc}
-              date={project.date}
-              tech={project.tech}
-            />
+            <ProjectItem key={project.number} {...project} />
           ))}
         </ul>
       </div>

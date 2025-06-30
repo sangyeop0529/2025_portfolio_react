@@ -27,7 +27,7 @@ const Skills = () => {
   };
 
   return (
-    <section className={style.section}>
+    <section className={style.section} id="skills">
       <div className={`${style.container} container`}>
         <SectionTitle
           center

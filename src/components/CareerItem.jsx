@@ -2,11 +2,11 @@ import React from "react";
 import style from "./CareerItem.module.css";
 import { RiGlobalLine } from "react-icons/ri";
 
-const CareerItem = ({ number, title, date, feature }) => {
+const CareerItem = ({ title, date, feature, thumbnail, URL }) => {
   return (
     <li className={style.card}>
       <figure className={style.thumbnail}>
-        <img src={`/images/img${number}.jpg`} alt={title} />
+        <img src={`/images/${thumbnail}.png`} alt={title} />
       </figure>
 
       <div className={style.info}>
@@ -22,10 +22,14 @@ const CareerItem = ({ number, title, date, feature }) => {
             ))}
           </ul>
 
-          <button className={style.btn}>
+          <a
+            href={URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={style.btn}>
             <RiGlobalLine />
             웹사이트 보기
-          </button>
+          </a>
         </div>
       </div>
     </li>
