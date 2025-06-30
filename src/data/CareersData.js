@@ -28,7 +28,7 @@ export const CareersData = [
   {
     number: 3,
     title: "세계로 교육",
-    date: "2025.05.21 ~ 2025.05.26",
+    date: "24.02.15 ~ 24.02.20",
     feature: [
       "퍼블리싱 100% 직접 작업 (HTML5, CSS3, JavaScript)",
       "영어교재 전문 쇼핑몰 사이트 구축",

@@ -58,3 +58,16 @@
   color: #888;
   line-height: 1.2;
 }
+
+.btn {
+  color: #fff;
+}
+
+.btn svg {
+  transition: all 400ms ease-in-out;
+}
+
+.btn svg:hover {
+  color: #ffc107;
+  transform: scale(1.1) rotate(15deg);
+}

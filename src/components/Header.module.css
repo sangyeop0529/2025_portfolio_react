@@ -10,20 +10,17 @@
 .header.scrolled {
   background: rgba(0, 0, 0, 0.8); /* 80% 투명도 검정 */
   backdrop-filter: blur(20px) saturate(180%);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .header.hovered {
   background: rgba(0, 0, 0, 0.9); /* 90% 투명도 검정 */
   backdrop-filter: blur(25px) saturate(200%);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 /* 스크롤 + 호버 동시 */
 .header.scrolled.hovered {
   background: rgba(0, 0, 0, 0.95); /* 95% 투명도 검정 */
   backdrop-filter: blur(30px) saturate(220%);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .container {
@@ -55,9 +52,7 @@
   border-radius: 100%;
   padding: 8px;
   box-sizing: border-box;
-}
-
-.nav {
+  cursor: pointer;
 }
 
 .nav ul {

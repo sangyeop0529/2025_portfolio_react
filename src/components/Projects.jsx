@@ -13,12 +13,12 @@ const Projects = () => {
   const projectsRef = useRef();
   const containerRef = useRef();
   const listRef = useRef();
+  const titleRef = useRef();
   const location = useLocation();
   const scrollTriggerRef = useRef(null);
 
   // 애니메이션 초기화 함수
   const initializeAnimations = () => {
-    // 기존 ScrollTrigger 인스턴스 제거
     if (scrollTriggerRef.current) {
       scrollTriggerRef.current.kill();
     }
@@ -34,7 +34,29 @@ const Projects = () => {
       gsap.set(projectsRef.current, { backgroundColor: "", clearProps: "all" });
       gsap.set(containerRef.current, { clearProps: "all" });
 
-      // 배경 애니메이션
+      // 타이틀
+      gsap.fromTo(
+        titleRef.current,
+        {
+          opacity: 0,
+          y: -40,
+          scale: 0.9,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 1,
+          ease: "back.out(1.7)",
+          scrollTrigger: {
+            trigger: titleRef.current,
+            start: "top 85%",
+            toggleActions: "play none none reverse",
+          },
+        }
+      );
+
+      // 배경
       gsap
         .timeline({
           scrollTrigger: {
@@ -53,7 +75,7 @@ const Projects = () => {
           0
         );
 
-      // 가로 스크롤 효과
+      // 가로 스크롤 효과 + 활성화 상태 구분
       const horizontalScroll = gsap.to(project, {
         xPercent: -100 * (project.length - 1),
         ease: "none",
@@ -65,6 +87,37 @@ const Projects = () => {
           end: () => "+=" + (listRef.current?.scrollWidth - window.innerWidth),
           invalidateOnRefresh: true,
           refreshPriority: 1,
+          onUpdate: (self) => {
+            // ✨ 활성화된 카드와 비활성화된 카드 구분
+            const progress = self.progress;
+            const totalCards = project.length;
+
+            project.forEach((item, index) => {
+              // 현재 화면 중앙에 가까운 카드 계산
+              const cardProgress = progress * totalCards - index;
+              const isActive = cardProgress >= -0.3 && cardProgress <= 0.7;
+
+              if (isActive) {
+                // 🔥 활성화된 카드 - 크고 선명하게
+                gsap.to(item, {
+                  scale: 1,
+                  opacity: 1,
+                  filter: "brightness(1) blur(0px)",
+                  duration: 0.3,
+                  ease: "power2.out",
+                });
+              } else {
+                // 😴 비활성화된 카드 - 작고 흐리게
+                gsap.to(item, {
+                  scale: 0.85,
+                  opacity: 0.6,
+                  filter: "brightness(0.7) blur(1px)",
+                  duration: 0.3,
+                  ease: "power2.out",
+                });
+              }
+            });
+          },
           onRefresh: (self) => {
             // ScrollTrigger 새로고침 시 end 값 재계산
             self.end =
@@ -183,11 +236,13 @@ const Projects = () => {
   return (
     <section id="projects" className={style.section} ref={projectsRef}>
       <div className={`${style.container} container`} ref={containerRef}>
-        <SectionTitle
-          title="Projects"
-          subTitle="체계적인 학습을 통해 쌓아온 React 개발 경험과 <br />그 과정에서 완성한
-          프로젝트들입니다."
-        />
+        <div ref={titleRef}>
+          <SectionTitle
+            title="Projects"
+            subTitle="체계적인 학습을 통해 쌓아온 React 개발 경험과 <br />그 과정에서 완성한
+            프로젝트들입니다."
+          />
+        </div>
 
         <ul className={style.list} ref={listRef}>
           {projectsData.map((project) => (

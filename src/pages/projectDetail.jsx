@@ -6,7 +6,6 @@ const projectDetail = () => {
   return (
     <>
       <Detail />
-      <Contact />
     </>
   );
 };
