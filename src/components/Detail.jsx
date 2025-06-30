@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import style from "./Detail.module.css";
 import { projectsData } from "../data/projectsData";
 import { useParams } from "react-router-dom";
@@ -8,7 +8,9 @@ import { FaGithub } from "react-icons/fa";
 const Detail = () => {
   const { number } = useParams();
 
-  console.log(number);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const project = projectsData.find(
     (project) => project.number === parseInt(number)
