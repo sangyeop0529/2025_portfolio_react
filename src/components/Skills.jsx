@@ -135,25 +135,35 @@ const Skills = () => {
         }
       );
 
-      // 카드들 패럴랙스 효과
-      gsap.to(firstRowCards, {
-        y: -20,
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top bottom",
-          end: "bottom top",
-          scrub: 2,
-        },
+      // 카드들 패럴랙스 효과 - 반응형 처리
+      const mm = gsap.matchMedia();
+
+      // 768px 초과에서만 패럴랙스 효과 적용
+      mm.add("(min-width: 769px)", () => {
+        gsap.to(firstRowCards, {
+          y: -20,
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top bottom",
+            end: "bottom top",
+            scrub: 2,
+          },
+        });
+
+        gsap.to(secondRowCards, {
+          y: 20, // 반대 방향
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top bottom",
+            end: "bottom top",
+            scrub: 2,
+          },
+        });
       });
 
-      gsap.to(secondRowCards, {
-        y: 20, // 반대 방향
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top bottom",
-          end: "bottom top",
-          scrub: 2,
-        },
+      // 768px 이하에서는 y: 0으로 고정
+      mm.add("(max-width: 768px)", () => {
+        gsap.set([...firstRowCards, ...secondRowCards], { y: 0 });
       });
 
       // 7. 카드 호버 효과 (인터랙션)

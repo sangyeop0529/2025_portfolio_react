@@ -16,3 +16,9 @@
   background-color: transparent;
   transition: background-color 0.5s ease;
 }
+
+@media (max-width: 1024px) {
+  .list {
+    gap: 5%;
+  }
+}

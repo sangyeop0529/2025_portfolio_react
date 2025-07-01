@@ -18,6 +18,7 @@
 
 .content {
   position: absolute;
+  width: 100%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -70,4 +71,45 @@
 .btn svg:hover {
   color: #ffc107;
   transform: scale(1.1) rotate(15deg);
+}
+
+@media (max-width: 1024px) {
+  .section {
+    min-height: 66vh;
+  }
+  .titleBox {
+    margin-bottom: 36px;
+  }
+  .title {
+    font-size: 100px;
+  }
+  .thankyou {
+    font-size: 58px;
+    top: -36px;
+  }
+  .info > div {
+    font-size: 46px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    min-height: 50vh;
+  }
+  .titleBox {
+    margin-bottom: 20px;
+  }
+  .title {
+    font-size: 60px;
+  }
+  .thankyou {
+    font-size: 30px;
+    top: -15px;
+  }
+  .info > div {
+    font-size: 25px;
+  }
+  .copyLight {
+    font-size: 12px;
+  }
 }

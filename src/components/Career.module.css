@@ -8,3 +8,23 @@
 .moreBtn {
   margin: 80px auto 0;
 }
+
+@media (max-width: 1024px) {
+  .list {
+    margin-top: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 80px 64px;
+  }
+
+  .moreBtn {
+    margin: 64px auto 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .list {
+    margin-top: 60px;
+    gap: 60px 40px;
+  }
+}

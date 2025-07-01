@@ -33,11 +33,6 @@
     transform: scale(1.02);
   }
 }
-.subTitle {
-  font-size: 24px;
-  line-height: 1.2;
-  font-weight: 300;
-}
 
 .btnGroup {
   display: flex;
@@ -54,4 +49,23 @@
   background: #ffd54f;
   transform: translateY(-2px);
   box-shadow: 0 10px 25px rgba(255, 193, 7, 0.4);
+}
+
+@media (max-width: 1024px) {
+  .title {
+    min-height: 220px;
+    font-size: 80px;
+    margin-bottom: 64px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section {
+    height: 80vh;
+  }
+  .title {
+    min-height: 180px;
+    font-size: 50px;
+    margin-bottom: 40px;
+  }
 }
