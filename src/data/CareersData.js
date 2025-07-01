@@ -15,7 +15,7 @@ export const CareersData = [
   {
     number: 2,
     title: "평택시문화재단",
-    date: "2025.05.21 ~ 2025.05.26",
+    date: "2024.11.21 ~ 2024.11.28",
     feature: [
       "퍼블리싱 100% 작업 (HTML5, CSS3, JavaScript)",
       "웹표준 및 웹접근성 준수 (평택시문화재단 공식 사이트)",
@@ -41,7 +41,7 @@ export const CareersData = [
   {
     number: 4,
     title: "SHP 코퍼레이션",
-    date: "2025.05.21 ~ 2025.05.26",
+    date: "2025.03.05 ~ 2025.03.14",
     feature: [
       "퍼블리싱 100% 직접 작업 (HTML5, CSS3, JavaScript)",
       "고객 요청으로 인한 일정 단축을 빠르게 소화",
@@ -54,7 +54,7 @@ export const CareersData = [
   {
     number: 5,
     title: "REALTY PLUS+",
-    date: "2025.05.21 ~ 2025.05.26",
+    date: "2025.02.11 ~ 2025.02.17",
     feature: [
       "퍼블리싱 100% 직접 작업 (HTML5, CSS3, JavaScript)",
       "부동산 전문 서비스 업체 맞춤형 반응형 웹사이트",
@@ -67,7 +67,7 @@ export const CareersData = [
   {
     number: 6,
     title: "거대마루",
-    date: "2025.05.21 ~ 2025.05.26",
+    date: "2020.08.17 ~ 2020.08.23",
     feature: [
       "퍼블리싱 100% 직접 작업 (HTML5, CSS3, JavaScript)",
       "건축자재 업체 특성에 맞는 제품 중심 레이아웃",
