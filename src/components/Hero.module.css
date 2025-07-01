@@ -60,9 +60,6 @@
 }
 
 @media (max-width: 768px) {
-  .section {
-    height: 80vh;
-  }
   .title {
     min-height: 180px;
     font-size: 50px;

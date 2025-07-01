@@ -28,3 +28,9 @@
     gap: 60px 40px;
   }
 }
+
+@media (max-width: 400px) {
+  .list {
+    gap: 60px 20px;
+  }
+}
